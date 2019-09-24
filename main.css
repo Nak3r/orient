@@ -2,35 +2,47 @@
 
 .name {
 	width: 10%;
+    vertical-align: top;
 }
 
 .team {
 	width: 10%;
+    vertical-align: top;
 }
 
 .finish,.penalty,.total,.place,.time_from_first  {
 	width: 5%;
 	word-wrap: break-word;
-    text-align:  right;
+    text-align:  center;
+    vertical-align: top;
 }
 
 
 .valid {
 	width: 5%;
 	word-wrap: break-word;
-    text-align: right;
+    text-align: center;
+    vertical-align: top;
 }
 
 .desc {
 	width: 40%;
 	word-wrap: break-word;
+	text-align: left;
+    vertical-align: top;
 }
 
 .undefined {
 	width: 3%;
 	word-wrap: break-word;
+    vertical-align: top;
 }
 .link {
     font-size: 1.5em;
+    margin-left: 0.5em;
     margin-right: 1em;
+}
+.results {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }

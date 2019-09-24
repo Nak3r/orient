@@ -25,6 +25,7 @@ fetch("https://nak3r.github.io/orient/data.json")
 		body.appendChild(classDistance);
 		classDistance.innerHTML = group;
 		var table = document.createElement("table");
+		table.classList.add("results")
 		body.appendChild(table);
 
 		var row = table.insertRow(-1);
