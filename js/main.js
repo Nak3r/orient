@@ -1,3 +1,4 @@
+
 /*fetch("http://localhost:8000/data.json")*/
 fetch("https://nak3r.github.io/orient/data.json")
 .then(response => response.json())
