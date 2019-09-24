@@ -5,14 +5,15 @@ fetch("https://nak3r.github.io/orient/data.json")
 	headers = data["headers"];
 	description = data["description"];
 	protocols =  data["data"];
-	console.log(headers, description, protocols);
-
+	var body = document.getElementsByTagName("body")[0];
 	for (var group in protocols) {
-		var body = document.getElementsByTagName("body")[0];
-		var classDistance = document.createElement("h4");
+
+		//Create anchor to group
 		var a = document.createElement("a");
 		a.name = group;
 		body.appendChild(a);
+
+		//Create link to anchors
 		var p = document.createElement("p");
 		body.appendChild(p);
 		for (var groupName in protocols) {
@@ -22,12 +23,16 @@ fetch("https://nak3r.github.io/orient/data.json")
 			link.classList.add("link");
 			p.appendChild(link)
 		}
-		body.appendChild(classDistance);
-		classDistance.innerHTML = group;
+
+		var groupName = document.createElement("h4");
+		groupName.innerHTML = group;
+		body.appendChild(groupName);
+
 		var table = document.createElement("table");
 		table.classList.add("results")
 		body.appendChild(table);
 
+		//Table headers
 		var row = table.insertRow(-1);
 		for (var h in headers) {
 			var th = document.createElement("th");
@@ -36,9 +41,8 @@ fetch("https://nak3r.github.io/orient/data.json")
 			row.appendChild(th);
 		}
 
+		//Data
 		for (var d in protocols[group]) {
-			console.log(protocols[group][d]);
-			let formatedJSON = JSON.stringify(protocols[group][d], null, 4);
 			var row = table.insertRow(-1);
 			
 			var cell = row.insertCell(0);
@@ -52,7 +56,6 @@ fetch("https://nak3r.github.io/orient/data.json")
 
 			}
 
-			/*document.body.innerHTML += `<pre>${formatedJSON}</pre>`;*/
 		}
 	}
 });
