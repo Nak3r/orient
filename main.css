@@ -1,0 +1,36 @@
+
+
+.name {
+	width: 10%;
+}
+
+.team {
+	width: 10%;
+}
+
+.finish,.penalty,.total,.place,.time_from_first  {
+	width: 5%;
+	word-wrap: break-word;
+    text-align:  right;
+}
+
+
+.valid {
+	width: 5%;
+	word-wrap: break-word;
+    text-align: right;
+}
+
+.desc {
+	width: 40%;
+	word-wrap: break-word;
+}
+
+.undefined {
+	width: 3%;
+	word-wrap: break-word;
+}
+.link {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
