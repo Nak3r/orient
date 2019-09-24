@@ -18,7 +18,7 @@
 }
 
 
-.valid {
+.valid, .points {
 	width: 5%;
 	word-wrap: break-word;
     text-align: center;

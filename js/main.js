@@ -1,7 +1,7 @@
 fetch("https://nak3r.github.io/orient/data.json")
 .then(response => response.json())
 .then(function(data){
-	var fields = ["name", "team", "finish", "penalty", "total", "place","time_from_first", "valid", "desc"];
+	var fields = ["name", "team", "finish", "penalty", "total", "place","time_from_first", "valid","points", "desc"];
 	headers = data["headers"];
 	description = data["description"];
 	protocols =  data["data"];
