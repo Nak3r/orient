@@ -1,7 +1,8 @@
+/*fetch("http://localhost:8000/data.json")*/
 fetch("https://nak3r.github.io/orient/data.json")
 .then(response => response.json())
 .then(function(data){
-	var fields = ["name", "team", "finish", "penalty", "total", "place","time_from_first", "valid","points", "desc"];
+	var fields = ["name", "team", "finish", "penalty", "total", "place","points","time_from_first", "valid", "desc"];
 	headers = data["headers"];
 	description = data["description"];
 	protocols =  data["data"];
@@ -55,6 +56,16 @@ fetch("https://nak3r.github.io/orient/data.json")
 				n = n + 1
 
 			}
+			var splits = protocols[group][d]["splits"];
+			for (var split in splits) {
+				var cell = row.insertCell(n);
+				cell.classList.add("splits");
+				n = n + 1
+				var splitData = splits[split];
+				cell.innerHTML = splitData;
+			}
+			
+
 
 		}
 	}

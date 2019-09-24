@@ -1,41 +1,41 @@
 
 
 .name {
-	width: 10%;
-    vertical-align: top;
+	width: 7%;
+    vertical-align: center;
 }
 
 .team {
-	width: 10%;
-    vertical-align: top;
+	width: 7%;
+    vertical-align: center;
 }
 
 .finish,.penalty,.total,.place,.time_from_first  {
-	width: 5%;
+	width: 4%;
 	word-wrap: break-word;
     text-align:  center;
-    vertical-align: top;
+    vertical-align: center;
 }
 
 
 .valid, .points {
-	width: 5%;
+	width: 4%;
 	word-wrap: break-word;
     text-align: center;
-    vertical-align: top;
+    vertical-align: center;
 }
 
 .desc {
-	width: 40%;
+	width: 5%;
 	word-wrap: break-word;
 	text-align: left;
-    vertical-align: top;
+    vertical-align: center;
 }
 
-.undefined {
+.undefined,.splits {
 	width: 3%;
 	word-wrap: break-word;
-    vertical-align: top;
+    vertical-align: center;
 }
 .link {
     font-size: 1.5em;
