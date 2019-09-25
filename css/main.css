@@ -18,8 +18,8 @@
 }
 
 .headers  {
-	font-size: 1.2em;
-	color: rgba(0, 0, 0, 0.54);
+	font-size: 1rem;
+	color: #000000;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -52,8 +52,8 @@
     margin-right: 1em;
 }
 .results {
-	margin-left: 0.5em;
-	margin-right: 0.5em;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .hover-row {

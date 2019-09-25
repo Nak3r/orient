@@ -23,7 +23,7 @@ fetch("https://nak3r.github.io/orient/data.json")
 			link.href = "#" + groupName;
 			link.innerHTML = groupName;
 			link.classList.add("link");
-			p.appendChild(link)
+			p.appendChild(link);
 		}
 
 		var groupName = document.createElement("h4");
@@ -31,7 +31,7 @@ fetch("https://nak3r.github.io/orient/data.json")
 		body.appendChild(groupName);
 
 		var table = document.createElement("table");
-		table.classList.add("results")
+		table.classList.add("results");
 		body.appendChild(table);
 
 		//Table headers
@@ -47,15 +47,16 @@ fetch("https://nak3r.github.io/orient/data.json")
 		//Data
 		for (var d in protocols[group]) {
 			var row = table.insertRow(-1);
-			row.classList.add("hover-row")
-			
-			var cell = row.insertCell(0);
-			cell.innerHTML = parseInt(d, 10) + 1
+			row.classList.add("hover-row");
+			var th = document.createElement("th");
+			th.classList.add("headers");
+			th.innerHTML = parseInt(d, 10) + 1;
+			row.appendChild(th);			
 			var n = 1
 			for (var field in dataFields) {
 				var cell = row.insertCell(n);
 				cell.classList.add(dataFields[field]);
-				cell.innerHTML = protocols[group][d][dataFields[field]]
+				cell.innerHTML = protocols[group][d][dataFields[field]];
 				n = n + 1
 
 			}
@@ -63,7 +64,7 @@ fetch("https://nak3r.github.io/orient/data.json")
 			for (var split in splits) {
 				var cell = row.insertCell(n);
 				cell.classList.add("splits");
-				n = n + 1
+				n = n + 1;
 				var splitData = splits[split];
 				cell.innerHTML = splitData;
 			}
