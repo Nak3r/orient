@@ -389,11 +389,10 @@ i {
 
 table, th, td {
   border: none;
-  table-layout: fixed;
 }
 
 table {
-  width: 140%;
+  width: 95%;
   display: table;
   border-collapse: collapse;
   border-spacing: 0;

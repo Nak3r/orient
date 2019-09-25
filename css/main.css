@@ -12,10 +12,19 @@
 
 .finish,.penalty,.total,.place,.time_from_first  {
 	width: 4%;
-	word-wrap: break-word;
+	/* word-wrap: break-word; */
     text-align:  center;
     vertical-align: center;
 }
+
+.headers  {
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.54);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 
 
 .valid, .points {
@@ -32,8 +41,8 @@
     vertical-align: center;
 }
 
-.undefined,.splits {
-	width: 3%;
+.undefined {
+	width: 1%;
 	word-wrap: break-word;
     vertical-align: center;
 }
@@ -45,4 +54,18 @@
 .results {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+}
+
+.hover-row {
+	color: #212529;
+	font-size: 1rem;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.hover-row:hover {
+	background-color: rgba(0, 0, 0, 0.04);
+}
+
+table {
+	background-color: rgba(0, 0, 0, 0);
 }

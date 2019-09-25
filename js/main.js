@@ -3,8 +3,8 @@
 fetch("https://nak3r.github.io/orient/data.json")
 .then(response => response.json())
 .then(function(data){
-	var fields = ["name", "team", "finish", "penalty", "total", "place","points","time_from_first", "valid", "desc"];
-	headers = data["headers"];
+	var dataFields = ["name", "team", "finish", "penalty", "total", "place","points","time_from_first", "valid", "desc"];
+	var headers = ["#","Фамилия, имя","Коллектив","На дистанции","Штраф","Результат","Место","Баллы","Отставание","Отметка","Примечание", "Сплиты"];
 	description = data["description"];
 	protocols =  data["data"];
 	var body = document.getElementsByTagName("body")[0];
@@ -39,21 +39,23 @@ fetch("https://nak3r.github.io/orient/data.json")
 		for (var h in headers) {
 			var th = document.createElement("th");
 			th.innerHTML = headers[h];
-			th.classList.add(fields[parseInt(h, 10)-1]);
+			th.classList.add(dataFields[parseInt(h, 10)-1]);
+			th.classList.add("headers");
 			row.appendChild(th);
 		}
 
 		//Data
 		for (var d in protocols[group]) {
 			var row = table.insertRow(-1);
+			row.classList.add("hover-row")
 			
 			var cell = row.insertCell(0);
 			cell.innerHTML = parseInt(d, 10) + 1
 			var n = 1
-			for (var field in fields) {
+			for (var field in dataFields) {
 				var cell = row.insertCell(n);
-				cell.classList.add(fields[field]);
-				cell.innerHTML = protocols[group][d][fields[field]]
+				cell.classList.add(dataFields[field]);
+				cell.innerHTML = protocols[group][d][dataFields[field]]
 				n = n + 1
 
 			}
