@@ -1,6 +1,6 @@
 
-/*fetch("http://localhost:8000/data.json")*/
-fetch("https://nak3r.github.io/orient/data.json")
+function parseData(url) {
+fetch(url)
 .then(response => response.json())
 .then(function(data){
 	var dataFields = ["name", "team", "finish", "penalty", "total", "place","points","time_from_first", "valid", "desc"];
@@ -8,6 +8,11 @@ fetch("https://nak3r.github.io/orient/data.json")
 	description = data["description"];
 	protocols =  data["data"];
 	var body = document.getElementsByTagName("body")[0];
+	var descriptionText = document.createElement("h4");
+	descriptionText.innerHTML = description;
+	descriptionText.classList.add("header");
+	body.appendChild(descriptionText);
+
 	for (var group in protocols) {
 
 		//Create anchor to group
@@ -74,3 +79,4 @@ fetch("https://nak3r.github.io/orient/data.json")
 		}
 	}
 });
+}
